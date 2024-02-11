@@ -1,6 +1,12 @@
+import * as helpers from './helpers.js';
+
 const tmdbKey = 'a995f12d420a59b5ff6e47ee8cdabab9';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
+
+require('dotenv').config();
+
+console.log(process.env);
 
 const getGenres = async () => {
  const genreRequestEndpoint = '/genre/movie/list';
